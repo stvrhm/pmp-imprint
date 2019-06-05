@@ -1,0 +1,39 @@
+.imprint {
+    background-color: $mainGrey;
+    color: white;
+    border-bottom: 1px solid rgba($mainGrey, .12);
+    padding: .3rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    h4 {
+        margin: 0;
+        text-align: left;
+        font-weight: 300;
+    }
+
+    &__btn-container {
+        
+        text-align: left;
+
+        @mixin atSmall {
+            text-align: right;
+        }
+    }
+
+    &__link {
+        margin-right: 1rem;
+        display: inline-block;
+    }
+
+    &--branding {
+
+        @mixin atSmall {
+            float: left;
+        }
+    }
+
+}

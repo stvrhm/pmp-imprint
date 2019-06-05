@@ -1,0 +1,95 @@
+.modal {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .95);
+    color: $mainGrey;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    overflow-y: scroll;
+
+    &--is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    &__inner {
+        width: 100%;
+        max-width: 1000px;
+        margin: 5rem auto;
+
+        h2 {
+            line-height: 4;
+            border-bottom: 1px solid rgba($mainGrey, .15);
+            text-align: center;
+            margin: 4rem 2rem 1rem 2rem;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 4rem 2rem 1rem 2rem;
+            font-weight: 400;
+        }
+
+        &--wrapper {
+            padding-left: 18px;
+            padding-right: 18px;
+            max-width: 1236px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+
+            &--medium {
+                max-width: 976px;
+            }
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-size: .9rem;
+        font-weight: 300;
+        line-height: 1.65;
+
+        span {
+            font-weight: 600;
+            display: block;
+        }
+
+        a, a:link, a:focus, a:visited {
+            text-decoration: none;
+            color: $mainGrey;
+            transition: color .3s ease-out;
+            outline: none;
+        }
+
+        a:hover {
+            color: rgba($mainGrey, 0.6);
+        }
+
+        @mixin atMedium {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        transform: scaleX(1.2);
+        transform-origin: 100% 0;
+        color: $mainGrey;
+        cursor: pointer;
+
+        &:hover {
+            color: rgba($mainGrey, 0.6);
+        }
+    }
+}
